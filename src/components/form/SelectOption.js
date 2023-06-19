@@ -1,17 +1,19 @@
 import React from "react";
 import { Select } from "@windmill/react-ui";
 
-const SelectOption = ({ register, name, label}) => {
+const SelectOption = ({ register, name, label }) => {
   return (
     <>
       <Select
-        className="border h-12 text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white border-transparent focus:bg-white focus:border-blue-500"
+        className="border h-12 text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white border-transparent focus:bg-white focus:border-green-500"
         name={name}
         {...register(`${name}`, {
           required: `${label} is required!`,
         })}
       >
-        <option value="" defaultValue hidden>Select type</option>
+        <option value="" defaultValue hidden>
+          Select type
+        </option>
         <option value="Fish & Meat">Fish & Meat</option>
         <option value="Household Tools">Household Tools</option>
         <option value="Cloths">Cloths</option>

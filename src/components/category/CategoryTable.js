@@ -77,7 +77,7 @@ const CategoryTable = ({
               {category?.children.length > 0 ? (
                 <Link
                   to={`/categories/${category?._id}`}
-                  className="text-blue-700"
+                  className="text-green-700"
                 >
                   {showingTranslateValue(category?.name, lang)}
 
@@ -90,9 +90,9 @@ const CategoryTable = ({
                             <div key={child._id}>
                               <Link
                                 to={`/categories/${child?._id}`}
-                                className="text-blue-700"
+                                className="text-green-700"
                               >
-                                <div className="flex text-xs items-center  text-blue-800">
+                                <div className="flex text-xs items-center  text-green-800">
                                   <span className=" text-xs text-gray-500 pr-1">
                                     <IoRemoveSharp />
                                   </span>

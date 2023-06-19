@@ -87,15 +87,25 @@ const ProductTable = ({ products, isCheck, setIsCheck, currency, lang }) => {
             </TableCell>
             <TableCell>
               <span className="text-sm font-semibold">
-                {currency}
-                {Number(product?.prices?.originalPrice).toFixed(2)}
+                {new Intl.NumberFormat({
+                  style: "currency",
+                  currency: "VND",
+                }).format(product?.prices?.originalPrice * 23000)}{" "}
+                VNĐ
+                {/* {currency}
+                {Number(product?.prices?.originalPrice).toFixed(2)} */}
               </span>
             </TableCell>
 
             <TableCell>
               <span className="text-sm font-semibold">
-                {currency}
-                {Number(product?.prices?.price).toFixed(2)}
+                {new Intl.NumberFormat({
+                  style: "currency",
+                  currency: "VND",
+                }).format(product?.prices?.price * 23000)}{" "}
+                VNĐ
+                {/* {currency}
+                {Number(product?.prices?.price).toFixed(2)} */}
               </span>
             </TableCell>
 
@@ -112,7 +122,7 @@ const ProductTable = ({ products, isCheck, setIsCheck, currency, lang }) => {
             <TableCell>
               <Link
                 to={`/product/${product?._id}`}
-                className="flex justify-center text-gray-400 hover:text-blue-600"
+                className="flex justify-center text-gray-400 hover:text-green-600"
               >
                 <Tooltip
                   id="view"

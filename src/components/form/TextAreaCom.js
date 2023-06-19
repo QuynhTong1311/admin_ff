@@ -1,5 +1,5 @@
-import { Textarea } from '@windmill/react-ui';
-import React from 'react';
+import { Textarea } from "@windmill/react-ui";
+import React from "react";
 
 const TextAreaCom = ({
   register,
@@ -13,11 +13,10 @@ const TextAreaCom = ({
   return (
     <>
       <Textarea
-        className="border text-sm focus:outline-none block w-full bg-gray-100 border-transparent focus:border-blue-500 focus:bg-white"
+        className="border text-sm focus:outline-none block w-full bg-gray-100 border-transparent focus:border-green-500 focus:bg-white"
         {...register(`${name}`, {
           required: required ? false : `${label} is required!`,
         })}
-        
         type={type}
         placeholder={placeholder}
         name={name}

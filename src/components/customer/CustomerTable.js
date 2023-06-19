@@ -15,7 +15,6 @@ import { Link } from "react-router-dom";
 const CustomerTable = ({ customers }) => {
   const { title, serviceId, handleModalOpen, handleUpdate } = useToggleDrawer();
 
-
   return (
     <>
       <DeleteModal id={serviceId} title={title} />
@@ -28,10 +27,15 @@ const CustomerTable = ({ customers }) => {
         {customers?.map((user) => (
           <TableRow key={user._id}>
             <TableCell>
-              <span className="font-semibold uppercase text-xs"> {user._id.substring(20, 24)}</span>
+              <span className="font-semibold uppercase text-xs">
+                {" "}
+                {user._id.substring(20, 24)}
+              </span>
             </TableCell>
             <TableCell>
-              <span className="text-sm">{dayjs(user.createdAt).format("MMM D, YYYY")}</span>
+              <span className="text-sm">
+                {dayjs(user.createdAt).format("MMM D, YYYY")}
+              </span>
             </TableCell>
             <TableCell>
               <span className="text-sm">{user.name}</span>
@@ -45,10 +49,15 @@ const CustomerTable = ({ customers }) => {
 
             <TableCell>
               <div className="flex justify-end text-right">
-                <div className="p-2 cursor-pointer text-gray-400 hover:text-blue-600">
+                <div className="p-2 cursor-pointer text-gray-400 hover:text-green-600">
                   {" "}
                   <Link to={`/customer-order/${user._id}`}>
-                    <Tooltip id="view" Icon={FiZoomIn} title={t("ViewOrder")} bgColor="#34D399" />
+                    <Tooltip
+                      id="view"
+                      Icon={FiZoomIn}
+                      title={t("ViewOrder")}
+                      bgColor="#34D399"
+                    />
                   </Link>
                 </div>
 

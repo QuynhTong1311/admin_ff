@@ -12,7 +12,7 @@ import ImageLight from "assets/img/forgot-password-office.jpeg";
 import ImageDark from "assets/img/forgot-password-office-dark.jpeg";
 
 const ResetPassword = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const { token } = useParams();
   const password = useRef("");
   const [loading, setLoading] = useState(false);
@@ -59,7 +59,7 @@ const ResetPassword = () => {
           </div>
           <main className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
             <div className="w-full">
-              <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200 bg-blue-500 hover:bg-blue-700">
+              <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200 bg-green-500 hover:bg-green-700">
                 {t("ResetPassword")}
               </h1>
 
@@ -88,19 +88,26 @@ const ResetPassword = () => {
                   type="password"
                   placeholder={t("ConfirmPassword")}
                   {...register("confirm_password", {
-                    validate: (value) => value === password.current || "The passwords do not match",
+                    validate: (value) =>
+                      value === password.current ||
+                      "The passwords do not match",
                   })}
                   className="border h-12 text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white border-transparent focus:bg-white"
                 />
                 <Error errorName={errors.confirm_password} />
 
-                <Button disabled={loading} type="submit" block className="mt-4 h-12">
+                <Button
+                  disabled={loading}
+                  type="submit"
+                  block
+                  className="mt-4 h-12"
+                >
                   {t("Reset")}
                 </Button>
               </form>
               <p className="mt-4">
                 <Link
-                  className="text-sm font-medium text-blue-500 dark:text-blue-400 hover:underline"
+                  className="text-sm font-medium text-green-500 dark:text-green-400 hover:underline"
                   to="/login"
                 >
                   {t("AlreadyAccount")}

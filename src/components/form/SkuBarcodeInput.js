@@ -1,5 +1,5 @@
-import { Input } from '@windmill/react-ui';
-import React from 'react';
+import { Input } from "@windmill/react-ui";
+import React from "react";
 
 const SkuBarcodeInput = ({
   id,
@@ -16,7 +16,7 @@ const SkuBarcodeInput = ({
         type="text"
         name={name}
         placeholder={placeholder}
-        className={`bg-gray-50 mx-1 rounded-sm h-8 w-18 md:w-20 lg:w-20 text-sm border border-gray-200 focus:border-blue-500 focus:bg-white focus:outline-none p-2`}
+        className={`bg-gray-50 mx-1 rounded-sm h-8 w-18 md:w-20 lg:w-20 text-sm border border-gray-200 focus:border-green-500 focus:bg-white focus:outline-none p-2`}
       />
     </>
   );

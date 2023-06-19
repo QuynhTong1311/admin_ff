@@ -71,7 +71,7 @@ const Card = ({ id, image, index, moveCard, handleRemoveImage }) => {
           alt="product"
         />
         {index === 0 && (
-          <p className="text-xs absolute py-1 w-full bottom-0 inset-x-0 bg-blue-500 rounded-full text-white text-center ">
+          <p className="text-xs absolute py-1 w-full bottom-0 inset-x-0 bg-green-500 rounded-full text-white text-center ">
             Default Image
           </p>
         )}

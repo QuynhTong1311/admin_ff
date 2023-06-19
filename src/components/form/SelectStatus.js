@@ -21,7 +21,7 @@ const SelectStatus = ({ id, order }) => {
     <>
       <Select
         onChange={(e) => handleChangeStatus(id, e.target.value)}
-        className="border border-gray-50 bg-gray-50 dark:border-gray-700 h-8 rounded-md text-xs focus:border-blue-500 focus:outline-none"
+        className="border border-gray-50 bg-gray-50 dark:border-gray-700 h-8 rounded-md text-xs focus:border-green-500 focus:outline-none"
       >
         <option value="status" defaultValue hidden>
           {order?.status}
@@ -32,7 +32,10 @@ const SelectStatus = ({ id, order }) => {
         <option defaultValue={order?.status === "Pending"} value="Pending">
           Pending
         </option>
-        <option defaultValue={order?.status === "Processing"} value="Processing">
+        <option
+          defaultValue={order?.status === "Processing"}
+          value="Processing"
+        >
           Processing
         </option>
         <option defaultValue={order?.status === "Cancel"} value="Cancel">

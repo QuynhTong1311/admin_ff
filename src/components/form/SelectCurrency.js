@@ -18,7 +18,7 @@ const SelectCurrency = ({
         "Loading..."
       ) : (
         <Select
-          className={`border text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white border-transparent focus:bg-white focus:border-blue-500 h-12`}
+          className={`border text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white border-transparent focus:bg-white focus:border-green-500 h-12`}
           name={name}
           {...register(`${name}`, {
             required: required ? false : `${label} is required!`,

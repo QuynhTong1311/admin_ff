@@ -1,7 +1,6 @@
-import Tooltip from 'components/tooltip/Tooltip';
-import { FiEdit, FiTrash2 } from 'react-icons/fi';
+import Tooltip from "components/tooltip/Tooltip";
+import { FiEdit, FiTrash2 } from "react-icons/fi";
 //internal import
-
 
 const EditDeleteButtonTwo = ({
   extra,
@@ -15,7 +14,7 @@ const EditDeleteButtonTwo = ({
         {!attribute && (
           <div
             // onClick={() => handleEditVariant(variant)}
-            className="p-2 cursor-pointer text-gray-400 hover:text-blue-600"
+            className="p-2 cursor-pointer text-gray-400 hover:text-green-600"
           >
             <Tooltip id="edit" Icon={FiEdit} title="Edit" bgColor="blue" />
           </div>

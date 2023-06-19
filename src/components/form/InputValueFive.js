@@ -1,4 +1,4 @@
-import { Input } from '@windmill/react-ui';
+import { Input } from "@windmill/react-ui";
 
 const InputValueFive = ({
   register,
@@ -10,7 +10,6 @@ const InputValueFive = ({
   label,
   type,
   placeholder,
-
 }) => {
   const value = {
     valueAsNumber: true,
@@ -39,7 +38,7 @@ const InputValueFive = ({
           type={type}
           placeholder={placeholder}
           name={name}
-          className="bg-gray-50 mr-2 rounded  w-full h-12 p-2 text-sm border border-gray-300 focus:bg-white focus:border-blue-500 focus:outline-none"
+          className="bg-gray-50 mr-2 rounded  w-full h-12 p-2 text-sm border border-gray-300 focus:bg-white focus:border-green-500 focus:outline-none"
         />
       </div>
     </>

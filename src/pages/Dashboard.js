@@ -252,7 +252,7 @@ const Dashboard = () => {
           loading={loadingOrderCount}
           quantity={dashboardOrderCount?.totalPendingOrder?.count || 0}
           amount={dashboardOrderCount?.totalPendingOrder?.total || 0}
-          className="text-blue-600 dark:text-blue-100 bg-blue-100 dark:bg-blue-500"
+          className="text-green-600 dark:text-green-100 bg-green-100 dark:bg-green-500"
         />
         <CardItem
           title={t("OrderProcessing")}
@@ -373,7 +373,7 @@ const Dashboard = () => {
               resultsPerPage={8}
               onChange={handleChangePage}
               label="Table navigation"
-              className="text-blue-500"
+              className="text-green-500"
             />
           </TableFooter>
         </TableContainer>

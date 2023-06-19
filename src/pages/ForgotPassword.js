@@ -10,7 +10,8 @@ import ImageLight from "assets/img/forgot-password-office.jpeg";
 import ImageDark from "assets/img/forgot-password-office-dark.jpeg";
 
 const ForgotPassword = () => {
-  const { onSubmit, register, handleSubmit, errors, loading } = useLoginSubmit();
+  const { onSubmit, register, handleSubmit, errors, loading } =
+    useLoginSubmit();
 
   return (
     <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
@@ -47,13 +48,18 @@ const ForgotPassword = () => {
                 />
                 <Error errorName={errors.verifyEmail} />
 
-                <Button disabled={loading} type="submit" block className="mt-4 h-12 bg-blue-500 hover:bg-blue-700">
+                <Button
+                  disabled={loading}
+                  type="submit"
+                  block
+                  className="mt-4 h-12 bg-green-500 hover:bg-green-700"
+                >
                   Recover password
                 </Button>
               </form>
               <p className="mt-4">
                 <Link
-                  className="text-sm font-medium text-blue-500 dark:text-blue-400 hover:underline"
+                  className="text-sm font-medium text-green-500 dark:text-green-400 hover:underline"
                   to="/login"
                 >
                   Already have an account? Login

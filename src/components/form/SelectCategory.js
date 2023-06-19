@@ -16,7 +16,7 @@ const SelectCategory = ({ setCategory, lang }) => {
     <>
       <Select
         onChange={(e) => setCategory(e.target.value)}
-        className="border h-12 text-sm focus:outline-none block w-full bg-gray-100 border-transparent focus:bg-white focus:border-blue-500"
+        className="border h-12 text-sm focus:outline-none block w-full bg-gray-100 border-transparent focus:bg-white focus:border-green-500"
       >
         <option value="All" defaultValue hidden>
           {t("Category")}

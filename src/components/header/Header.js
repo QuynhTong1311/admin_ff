@@ -2,6 +2,7 @@ import { Avatar, Badge, WindmillContext } from "@windmill/react-ui";
 import Cookies from "js-cookie";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars-2";
+
 import {
   IoClose,
   IoGridOutline,
@@ -26,7 +27,8 @@ import { emptySideBarMenu } from "redux/Actions/SideBarActions";
 
 const Header = () => {
   const reduxDisPatch = useDispatch();
-  const { toggleSidebar, handleLanguageChange, setNavBar, navBar } = useContext(SidebarContext);
+  const { toggleSidebar, handleLanguageChange, setNavBar, navBar } =
+    useContext(SidebarContext);
   const { state, dispatch } = useContext(AdminContext);
   const { adminInfo } = state;
   const { mode, toggleMode } = useContext(WindmillContext);
@@ -43,7 +45,9 @@ const Header = () => {
     Cookies.remove("adminInfo");
     reduxDisPatch(emptySideBarMenu());
     reduxDisPatch(emptySetting());
-    window.location.replace(`https://${process.env.REACT_APP_ADMIN_DOMAIN}/login`);
+    window.location.replace(
+      `https://${process.env.REACT_APP_ADMIN_DOMAIN}/login`
+    );
   };
 
   useEffect(() => {
@@ -75,7 +79,7 @@ const Header = () => {
   return (
     <>
       <header className="z-30 py-4 bg-white shadow-sm dark:bg-gray-800">
-        <div className="container flex items-center justify-between h-full px-6 mx-auto text-blue-500 dark:text-blue-500">
+        <div className="container flex items-center justify-between h-full px-6 mx-auto text-green-500 dark:text-green-500">
           <button
             type="button"
             onClick={() => setNavBar(!navBar)}
@@ -185,7 +189,9 @@ const Header = () => {
                               <p className="flex items-center text-xs text-gray-400">
                                 <Badge type="danger">Stock Out</Badge>
 
-                                <span className="ml-2">Dec 12 2021 - 12:40PM</span>
+                                <span className="ml-2">
+                                  Dec 12 2021 - 12:40PM
+                                </span>
                               </p>
                             </div>
                           </div>
@@ -205,13 +211,17 @@ const Header = () => {
 
                             <div className="notification-content">
                               <h6 className="font-medium text-gray-500">
-                                Sam L. Placed <span className="font-bold">$300</span> USD order!
+                                Sam L. Placed{" "}
+                                <span className="font-bold">$300</span> USD
+                                order!
                               </h6>
 
                               <p className="flex items-center text-xs text-gray-400">
                                 <Badge type="success">New Order</Badge>
 
-                                <span className="ml-2">Nov 30 2021 - 2:40PM</span>
+                                <span className="ml-2">
+                                  Nov 30 2021 - 2:40PM
+                                </span>
                               </p>
                             </div>
                           </div>
@@ -237,7 +247,9 @@ const Header = () => {
                               <p className="flex items-center text-xs text-gray-400">
                                 <Badge type="danger">Stock Out</Badge>
 
-                                <span className="ml-2">Dec 15 2021 - 12:40PM</span>
+                                <span className="ml-2">
+                                  Dec 15 2021 - 12:40PM
+                                </span>
                               </p>
                             </div>
                           </div>
@@ -263,7 +275,9 @@ const Header = () => {
                               <p className="flex items-center text-xs text-gray-400">
                                 <Badge type="danger">Stock Out</Badge>
 
-                                <span className="ml-2">Dec 20 2021 - 12:40PM</span>
+                                <span className="ml-2">
+                                  Dec 20 2021 - 12:40PM
+                                </span>
                               </p>
                             </div>
                           </div>
@@ -289,7 +303,9 @@ const Header = () => {
                               <p className="flex items-center text-xs text-gray-400">
                                 <Badge type="danger">Stock Out</Badge>
 
-                                <span className="ml-2">Dec 25 2021 - 12:40PM</span>
+                                <span className="ml-2">
+                                  Dec 25 2021 - 12:40PM
+                                </span>
                               </p>
                             </div>
                           </div>
@@ -309,13 +325,17 @@ const Header = () => {
 
                             <div className="notification-content">
                               <h6 className="font-medium text-gray-500">
-                                John Doe Placed <span className="font-bold">$513</span> USD order!
+                                John Doe Placed{" "}
+                                <span className="font-bold">$513</span> USD
+                                order!
                               </h6>
 
                               <p className="flex items-center text-xs text-gray-400">
                                 <Badge type="success">New Order</Badge>
 
-                                <span className="ml-2">Dec 18 2021 - 12:40PM</span>
+                                <span className="ml-2">
+                                  Dec 18 2021 - 12:40PM
+                                </span>
                               </p>
                             </div>
                           </div>
@@ -334,11 +354,15 @@ const Header = () => {
             {/* <!-- Profile menu --> */}
             <li className="relative inline-block text-left" ref={pRef}>
               <button
-                className="rounded-full dark:bg-gray-500 bg-blue-500 text-white h-8 w-8 font-medium mx-auto focus:outline-none"
+                className="rounded-full dark:bg-gray-500 bg-green-500 text-white h-8 w-8 font-medium mx-auto focus:outline-none"
                 onClick={handleProfileOpen}
               >
                 {adminInfo.image ? (
-                  <Avatar className="align-middle" src={`${adminInfo.image}`} aria-hidden="true" />
+                  <Avatar
+                    className="align-middle"
+                    src={`${adminInfo.image}`}
+                    aria-hidden="true"
+                  />
                 ) : (
                   <span>{adminInfo.email[0].toUpperCase()}</span>
                 )}
@@ -346,19 +370,25 @@ const Header = () => {
 
               {profileOpen && (
                 <ul className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                  <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-green-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
                     <Link to="/dashboard">
                       <span className="flex items-center text-sm">
-                        <IoGridOutline className="w-4 h-4 mr-3" aria-hidden="true" />
+                        <IoGridOutline
+                          className="w-4 h-4 mr-3"
+                          aria-hidden="true"
+                        />
                         <span>{t("Dashboard")}</span>
                       </span>
                     </Link>
                   </li>
 
-                  <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                  <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-green-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
                     <Link to="/edit-profile">
                       <span className="flex items-center text-sm">
-                        <IoSettingsOutline className="w-4 h-4 mr-3" aria-hidden="true" />
+                        <IoSettingsOutline
+                          className="w-4 h-4 mr-3"
+                          aria-hidden="true"
+                        />
                         <span>{t("EditProfile")}</span>
                       </span>
                     </Link>
@@ -366,10 +396,13 @@ const Header = () => {
 
                   <li
                     onClick={handleLogOut}
-                    className="cursor-pointer justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                    className="cursor-pointer justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-green-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                   >
                     <span className="flex items-center text-sm">
-                      <IoLogOutOutline className="w-4 h-4 mr-3" aria-hidden="true" />
+                      <IoLogOutOutline
+                        className="w-4 h-4 mr-3"
+                        aria-hidden="true"
+                      />
                       <span>{t("LogOut")}</span>
                     </span>
                   </li>

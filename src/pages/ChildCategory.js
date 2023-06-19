@@ -34,7 +34,6 @@ const ChildCategory = () => {
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [isCheck, setIsCheck] = useState([]);
 
-
   const { toggleDrawer, lang } = useContext(SidebarContext);
   const { handleDeleteMany, allId, handleUpdateMany } = useToggleDrawer();
   const { data, loading } = useAsync(CategoryServices.getAllCategory);
@@ -122,7 +121,7 @@ const ChildCategory = () => {
                 {" "}
                 <FiChevronRight />{" "}
               </li>
-              <li className="text-sm pl-1 transition duration-200 ease-in cursor-pointer text-blue-700 hover:text-blue-500 font-semibold ">
+              <li className="text-sm pl-1 transition duration-200 ease-in cursor-pointer text-green-700 hover:text-green-500 font-semibold ">
                 <Link to={`/categories/${child._id}`}>
                   {showingTranslateValue(child?.name, lang)}
                 </Link>
@@ -187,7 +186,7 @@ const ChildCategory = () => {
                 <TableCell>{t("catIconTbl")}</TableCell>
                 <TableCell>{t("Name")}</TableCell>
                 <TableCell>{t("Description")}</TableCell>
-            
+
                 <TableCell className="text-center">
                   {t("catPublishedTbl")}
                 </TableCell>
@@ -204,7 +203,6 @@ const ChildCategory = () => {
               isCheck={isCheck}
               setIsCheck={setIsCheck}
               useParamId={id}
-             
             />
           </Table>
           <TableFooter>

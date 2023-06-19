@@ -12,7 +12,7 @@ const SelectReceiptSize = ({
     <>
       <Select
         onChange={(e) => setPosCustomer(e.target.value)}
-        className={`border text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white focus:border-blue-500 border-transparent focus:bg-white ${
+        className={`border text-sm focus:outline-none block w-full bg-gray-100 dark:bg-white focus:border-green-500 border-transparent focus:bg-white ${
           pos ? "h-10" : "h-12"
         }`}
         name={name}
