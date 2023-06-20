@@ -335,7 +335,7 @@ const InvoiceForDownload = ({ data, currency, globalSetting }) => {
                   textAlign: "right",
                 }}
               >
-                Mernshop
+                FreshFruit
               </Text>
 
               <Text style={styles.topAddress}>{globalSetting?.shop_name}</Text>
