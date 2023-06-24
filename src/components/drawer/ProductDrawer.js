@@ -274,7 +274,6 @@ const ProductDrawer = ({ id }) => {
                 <div className="col-span-8 sm:col-span-4">
                   <InputValue
                     register={register}
-                    maxValue={2000}
                     minValue={1}
                     label="Original Price"
                     name="originalPrice"
